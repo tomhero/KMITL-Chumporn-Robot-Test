@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170426 01:26:29.665" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="D:\IT KMITL_2_2559\SVV\Robot Test\chumporn.robot" id="s1" name="Chumporn">
+<test id="s1-t1" name="Online service test one">
+<kw name="Go to index">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170426 01:26:29.854" level="INFO">Opening browser 'chrome' to base url 'http://www.pcc.kmitl.ac.th/index.php'</msg>
+<status status="PASS" endtime="20170426 01:26:38.720" starttime="20170426 01:26:29.853"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:26:38.720" starttime="20170426 01:26:29.853"></status>
+</kw>
+<kw name="Go to online service page">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>dom=document.links[32]</arg>
+</arguments>
+<msg timestamp="20170426 01:26:38.722" level="INFO">Clicking link 'dom=document.links[32]'.</msg>
+<status status="PASS" endtime="20170426 01:26:39.337" starttime="20170426 01:26:38.722"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>บริการออนไลน์</arg>
+</arguments>
+<msg timestamp="20170426 01:26:39.379" level="INFO">Current page contains text 'บริการออนไลน์'.</msg>
+<status status="PASS" endtime="20170426 01:26:39.379" starttime="20170426 01:26:39.337"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:26:39.379" starttime="20170426 01:26:38.721"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>dom=document.links[39]</arg>
+</arguments>
+<msg timestamp="20170426 01:26:39.380" level="INFO">Clicking link 'dom=document.links[39]'.</msg>
+<status status="PASS" endtime="20170426 01:26:39.497" starttime="20170426 01:26:39.380"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>url=http://regchumphon.kmitl.ac.th/registrar/index/index.php</arg>
+</arguments>
+<status status="PASS" endtime="20170426 01:26:40.644" starttime="20170426 01:26:39.498"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ทะเบียน</arg>
+<arg>timeout=${FIVESECOND}</arg>
+</arguments>
+<status status="PASS" endtime="20170426 01:26:40.675" starttime="20170426 01:26:40.645"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>ประกาศ</arg>
+</arguments>
+<msg timestamp="20170426 01:26:40.712" level="INFO">Current page contains text 'ประกาศ'.</msg>
+<status status="PASS" endtime="20170426 01:26:40.713" starttime="20170426 01:26:40.676"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170426 01:26:43.857" starttime="20170426 01:26:40.713"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:26:43.857" critical="yes" starttime="20170426 01:26:29.852"></status>
+</test>
+<test id="s1-t2" name="Online service test two">
+<kw name="Go to index">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170426 01:26:43.862" level="INFO">Opening browser 'chrome' to base url 'http://www.pcc.kmitl.ac.th/index.php'</msg>
+<status status="PASS" endtime="20170426 01:26:51.713" starttime="20170426 01:26:43.861"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:26:51.713" starttime="20170426 01:26:43.861"></status>
+</kw>
+<kw name="Go to online service page">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>dom=document.links[32]</arg>
+</arguments>
+<msg timestamp="20170426 01:26:51.715" level="INFO">Clicking link 'dom=document.links[32]'.</msg>
+<status status="PASS" endtime="20170426 01:26:52.368" starttime="20170426 01:26:51.715"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>บริการออนไลน์</arg>
+</arguments>
+<msg timestamp="20170426 01:26:52.402" level="INFO">Current page contains text 'บริการออนไลน์'.</msg>
+<status status="PASS" endtime="20170426 01:26:52.402" starttime="20170426 01:26:52.368"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:26:52.402" starttime="20170426 01:26:51.714"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>dom=document.links[40]</arg>
+</arguments>
+<msg timestamp="20170426 01:26:52.403" level="INFO">Clicking link 'dom=document.links[40]'.</msg>
+<status status="PASS" endtime="20170426 01:26:52.513" starttime="20170426 01:26:52.403"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>url=https://webmail.kmitl.ac.th/mail/</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170426 01:26:53.840" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170426 01:26:53.840" starttime="20170426 01:26:53.647"></status>
+</kw>
+<msg timestamp="20170426 01:26:53.842" level="FAIL">ValueError: Unable to locate window with URL 'https://webmail.kmitl.ac.th/mail/'</msg>
+<status status="FAIL" endtime="20170426 01:26:53.842" starttime="20170426 01:26:52.514"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170426 01:26:56.983" starttime="20170426 01:26:53.843"></status>
+</kw>
+<status status="FAIL" endtime="20170426 01:26:56.984" critical="yes" starttime="20170426 01:26:43.860">ValueError: Unable to locate window with URL 'https://webmail.kmitl.ac.th/mail/'</status>
+</test>
+<test id="s1-t3" name="Online service test three">
+<kw name="Go to index">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170426 01:26:56.988" level="INFO">Opening browser 'chrome' to base url 'http://www.pcc.kmitl.ac.th/index.php'</msg>
+<status status="PASS" endtime="20170426 01:27:05.000" starttime="20170426 01:26:56.988"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:27:05.000" starttime="20170426 01:26:56.987"></status>
+</kw>
+<kw name="Go to online service page">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>dom=document.links[32]</arg>
+</arguments>
+<msg timestamp="20170426 01:27:05.003" level="INFO">Clicking link 'dom=document.links[32]'.</msg>
+<status status="PASS" endtime="20170426 01:27:05.605" starttime="20170426 01:27:05.002"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>บริการออนไลน์</arg>
+</arguments>
+<msg timestamp="20170426 01:27:05.651" level="INFO">Current page contains text 'บริการออนไลน์'.</msg>
+<status status="PASS" endtime="20170426 01:27:05.651" starttime="20170426 01:27:05.605"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:27:05.652" starttime="20170426 01:27:05.002"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>dom=document.links[41]</arg>
+</arguments>
+<msg timestamp="20170426 01:27:05.653" level="INFO">Clicking link 'dom=document.links[41]'.</msg>
+<status status="PASS" endtime="20170426 01:27:05.767" starttime="20170426 01:27:05.652"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>title=Central Library Homepage</arg>
+</arguments>
+<status status="PASS" endtime="20170426 01:27:06.907" starttime="20170426 01:27:05.770"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>สารนิเทศ</arg>
+<arg>timeout=${TENSECOND}</arg>
+</arguments>
+<status status="PASS" endtime="20170426 01:27:06.947" starttime="20170426 01:27:06.909"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>สืบค้น</arg>
+</arguments>
+<msg timestamp="20170426 01:27:06.982" level="INFO">Current page contains text 'สืบค้น'.</msg>
+<status status="PASS" endtime="20170426 01:27:06.982" starttime="20170426 01:27:06.948"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>ยืม</arg>
+</arguments>
+<msg timestamp="20170426 01:27:07.017" level="INFO">Current page contains text 'ยืม'.</msg>
+<status status="PASS" endtime="20170426 01:27:07.018" starttime="20170426 01:27:06.983"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>คืน</arg>
+</arguments>
+<msg timestamp="20170426 01:27:07.051" level="INFO">Current page contains text 'คืน'.</msg>
+<status status="PASS" endtime="20170426 01:27:07.051" starttime="20170426 01:27:07.019"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170426 01:27:10.200" starttime="20170426 01:27:07.052"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:27:10.201" critical="yes" starttime="20170426 01:26:56.986"></status>
+</test>
+<test id="s1-t4" name="Online service test four">
+<kw name="Go to index">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170426 01:27:10.206" level="INFO">Opening browser 'chrome' to base url 'http://www.pcc.kmitl.ac.th/index.php'</msg>
+<status status="PASS" endtime="20170426 01:27:18.887" starttime="20170426 01:27:10.205"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:27:18.887" starttime="20170426 01:27:10.205"></status>
+</kw>
+<kw name="Go to online service page">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>dom=document.links[32]</arg>
+</arguments>
+<msg timestamp="20170426 01:27:18.889" level="INFO">Clicking link 'dom=document.links[32]'.</msg>
+<status status="PASS" endtime="20170426 01:27:19.540" starttime="20170426 01:27:18.889"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>บริการออนไลน์</arg>
+</arguments>
+<msg timestamp="20170426 01:27:19.580" level="INFO">Current page contains text 'บริการออนไลน์'.</msg>
+<status status="PASS" endtime="20170426 01:27:19.580" starttime="20170426 01:27:19.540"></status>
+</kw>
+<status status="PASS" endtime="20170426 01:27:19.580" starttime="20170426 01:27:18.888"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>dom=document.links[42]</arg>
+</arguments>
+<msg timestamp="20170426 01:27:19.582" level="INFO">Clicking link 'dom=document.links[42]'.</msg>
+<status status="PASS" endtime="20170426 01:27:19.687" starttime="20170426 01:27:19.582"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects the window matching locator and return previous window handle.</doc>
+<arguments>
+<arg>url=http://161.246.199.31/forum/</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170426 01:27:41.153" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170426 01:27:41.154" starttime="20170426 01:27:40.965"></status>
+</kw>
+<msg timestamp="20170426 01:27:41.155" level="FAIL">ValueError: Unable to locate window with URL 'http://161.246.199.31/forum/'</msg>
+<status status="FAIL" endtime="20170426 01:27:41.155" starttime="20170426 01:27:19.689"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170426 01:27:44.291" starttime="20170426 01:27:41.156"></status>
+</kw>
+<status status="FAIL" endtime="20170426 01:27:44.291" critical="yes" starttime="20170426 01:27:10.204">ValueError: Unable to locate window with URL 'http://161.246.199.31/forum/'</status>
+</test>
+<status status="FAIL" endtime="20170426 01:27:44.295" starttime="20170426 01:26:29.669"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="2">Critical Tests</stat>
+<stat fail="2" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Chumporn" pass="2">Chumporn</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
