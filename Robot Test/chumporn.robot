@@ -6,18 +6,43 @@ ${HOMEPAGE}    http://www.pcc.kmitl.ac.th/index.php
 ${BROWSER}    chrome
 ${FIVESECOND}    5.0
 ${TENSECOND}    10.0
+${USERNAME}    admin
+${PASSWORD}    13245
 
 *** Keywords ***
 Go to index
     Open Browser    ${HOMEPAGE}    ${BROWSER}
 
 Go to online service page
-    Click Link    dom=document.links[32]
+    Click Link    css=#nav > ul > li.item-135 > a
     Page Should Contain    บริการออนไลน์
 
+Go to club menu tab
+    Mouse Over    dom=document.links[20]
+    Wait Until Element Is Visible    css=.item-128 > a
+    Click Link    css=.item-128 > a
+
 *** Test Cases ***
-Online service test one
+Login invalid test
     Go to index
+    Click Link    dom=document.links[54]
+    Input Text    name=username    ${USERNAME}
+    Input Password    name=password    ${PASSWORD}
+    Click Button    css=#comp-i > div.login > form > fieldset > button
+    Select Window    url=http://www.pcc.kmitl.ac.th/index.php/login?task=user.login
+    Click Element    css=#error > div
+    Wait Until Page Contains    invalid username    timeout=${FIVESECOND}
+    Page Should Contain    ผิด
+    [Teardown]    Close Browser
+
+Login empty input test
+    Go to index
+    Click Link    dom=document.links[54]
+    Input Text    name=username    ${USERNAME}
+    Click Button    css=#comp-i > div.login > form > fieldset > button
+    Location Should Be    http://www.pcc.kmitl.ac.th/index.php/login
+
+Online service test one
     Go to online service page
     Click Link    dom=document.links[39]
     Select Window    url=http://regchumphon.kmitl.ac.th/registrar/index/index.php
@@ -39,7 +64,7 @@ Online service test three
     Go to online service page
     Click Link    dom=document.links[41]
     Select Window    title=Central Library Homepage
-    Wait Until Page Contains    สารนิเทศ    timeout=${TENSECOND}
+    Wait Until Page Contains    สารนิเทศ    timeout=${FIVESECOND}
     Page Should Contain    สืบค้น
     Page Should Contain    ยืม
     Page Should Contain    คืน
@@ -55,3 +80,13 @@ Online service test four
     Page Should Contain    ฟอรั่ม
     Page Should Contain    กระทู้
     [Teardown]    Close Browser
+
+Go to robot club Facebook page
+    Go to index
+    Go to club menu tab
+    Click Link    dom=document.links[39]
+    Select Window    url=http://www.pcc.kmitl.ac.th/Robot%20Club%20Kmitl%20ChumphonCampus
+    Page Should Not Contain    Not Found
+    Wait Until Page Contains    facebook
+    [Teardown]    Close Browser
+    
